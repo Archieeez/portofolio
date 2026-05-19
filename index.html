@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bryan Archie — Computer Science Student</title>
+  <meta name="description" content="Portfolio of Bryan Archie (RC) — Computer Science student at BINUS University, full-stack developer, and published researcher." />
+
+  <!-- Favicon (a small RC monogram emoji style) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌘</text></svg>" />
+
+  <!-- Fonts: JetBrains Mono (display/code feel) + Sora (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scanline overlay for terminal feel -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Driving animation canvas (fixed background) -->
+  <canvas id="driving-canvas" aria-hidden="true"></canvas>
+  <div class="canvas-vignette" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>RC<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home"><span class="nav-num">01.</span> home</a></li>
+        <li><a href="#about"><span class="nav-num">02.</span> about</a></li>
+        <li><a href="#projects"><span class="nav-num">03.</span> projects</a></li>
+        <li><a href="#skills"><span class="nav-num">04.</span> skills</a></li>
+        <li><a href="#contact"><span class="nav-num">05.</span> contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =================== HOME =================== -->
+  <section id="home" class="section section-home">
+    <div class="container home-container">
+      <div class="home-text">
+        <p class="eyebrow"><span class="blink">▸</span> initializing...</p>
+        <h1 class="home-name">
+          <span class="name-line">Bryan Archie</span>
+          <span class="name-sub">a.k.a. <span class="accent">RC</span></span>
+        </h1>
+        <p class="home-title">
+          Computer Science Student<span class="sep">/</span>Full-Stack Developer
+        </p>
+        <p class="home-tagline">
+          Writing code at 2 AM while thinking about everything else.
+          Currently studying at <span class="highlight">BINUS University</span>, published at IEEE iSemantic 2025.
+        </p>
+
+        <div class="home-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <div class="home-socials">
+          <a href="https://wa.me/6287877999099" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/bryanarchie_" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/bryan-archie-21896629b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/Archieeez" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="home-visual">
+        <div class="profile-frame">
+          <div class="profile-corners">
+            <span class="corner tl"></span><span class="corner tr"></span>
+            <span class="corner bl"></span><span class="corner br"></span>
+          </div>
+          <!-- Placeholder profile image. Replace 'profile.jpg' with your photo. -->
+          <img src="profile.jpg" alt="Bryan Archie" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <!-- <div class="profile-placeholder">
+            <span class="placeholder-text">profile.jpg</span>
+            <span class="placeholder-sub">drop your photo here</span>
+          </div> -->
+        </div>
+        <div class="profile-meta">
+          <div class="meta-row"><span class="meta-label">status</span><span class="meta-val"><span class="dot-live"></span>available for internships</span></div>
+          <div class="meta-row"><span class="meta-label">location</span><span class="meta-val">Jakarta, ID</span></div>
+          <div class="meta-row"><span class="meta-label">gpa</span><span class="meta-val">3.68 / 4.00</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =================== ABOUT =================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">02 //</span>
+        <h2 class="section-title">about<span class="accent">.</span></h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm Bryan but most people call me <span class="accent">Archie</span> (or just <span class="accent">RC</span>).
+            I'm a Computer Science student at BINUS University's Global Class, where I've spent the
+            last few years figuring out what it actually means to <em>build</em> things instead of
+            just surviving to passes a test.
+          </p>
+          <p>
+            My work bounces between full-stack web development, machine learning research, and
+            interface design. Outside the editor, I'm into <span class="chip-inline">cars &amp; EVs</span>,
+            <span class="chip-inline">modeling</span>, and <span class="chip-inline">music</span>.
+            all of which sneak their way into how I think about software such as clean design, good
+            timing, and things that move smoothly.
+          </p>
+          <p>
+            Right now I'm hunting for internships where I can do real engineering work and learn
+            from people who are further down the road than me.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Spring 2026</span>
+              <h3 class="timeline-title">Exchange Student</h3>
+              <p class="timeline-org">Beijing Institute of Technology - 6th semester</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 - Present</span>
+              <h3 class="timeline-title">B.Sc. Computer Science</h3>
+              <p class="timeline-org">BINUS University (Global Class) - GPA 3.68</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 - 2023</span>
+              <h3 class="timeline-title">High School - MIPA</h3>
+              <p class="timeline-org">SMA Penabur Gading Serpong - AVG 88</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PROJECTS =================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">03 //</span>
+        <h2 class="section-title">projects<span class="accent">.</span></h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <!-- Featured: iSemantic paper -->
+      <article class="project featured">
+        <div class="featured-badge">
+          <span class="badge-dot"></span> featured · published research
+        </div>
+        <div class="featured-grid">
+          <div class="featured-meta">
+            <p class="project-kicker">IEEE iSemantic 2025 · International Conference</p>
+            <h3 class="project-title">Client-Based Learning &amp; Zero-Knowledge Proof Implementation in Social Media Recommendation Systems</h3>
+            <p class="project-desc">
+              Published paper exploring privacy-preserving recommendation systems using client-side
+              ML and ZKP. Presented at the International Semantic Technology and
+              Applications Conference.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Privacy</span>
+              <span class="tag">Research</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://ieeexplore.ieee.org/document/11291883" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7M10 14L21 3M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>
+                <span>Read on IEEE</span>
+              </a>
+            </div>
+          </div>
+          <div class="featured-visual">
+            <div class="terminal-card">
+              <div class="terminal-bar">
+                <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+                <span class="terminal-name">~/research/zkp-recsys</span>
+              </div>
+              <pre class="terminal-body"><span class="t-prompt">$</span> publish --venue iSemantic2025
+<span class="t-ok">✓</span> paper accepted
+<span class="t-ok">✓</span> presented
+<span class="t-ok">✓</span> indexed on IEEE Xplore
+
+<span class="t-prompt">$</span> cite --doi 10.1109/iSemantic.2025
+<span class="t-comment"># client-side ML × zero-knowledge proofs</span>
+<span class="t-comment"># for privacy-preserving recommenders</span></pre>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Other projects grid -->
+      <div class="projects-grid">
+
+        <!-- itinerary.id (best project, prominent) -->
+        <article class="project-card project-card-wide">
+          <div class="card-head">
+            <span class="card-num">/02</span>
+            <span class="card-status"><span class="dot-live"></span>live</span>
+          </div>
+          <h3 class="card-title">itinerary.id</h3>
+          <p class="card-desc">
+            A travel itinerary planner built specifically for Indonesian travelers. Helping
+            people plan trips with local context, not generic recommendations. My favorite
+            project to date.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Product</span>
+            <span class="tag">Full-Stack</span>
+            <span class="tag">Travel</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://itinerary.id" target="_blank" rel="noopener" class="btn btn-small btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7M10 14L21 3M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>
+              <span>Visit Site</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Bintang Tenda -->
+        <article class="project-card">
+          <div class="card-head">
+            <span class="card-num">/03</span>
+            <span class="card-status"><span class="dot-live"></span>live · client</span>
+          </div>
+          <h3 class="card-title">Bintang Tenda Membrane</h3>
+          <p class="card-desc">
+            Freelance full-stack build for a tent-services business. Designed in Figma,
+            shipped on WordPress + Elementor end to end.
+          </p>
+          <div class="project-tags">
+            <span class="tag">WordPress</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Freelance</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://bintangtenda.id" target="_blank" rel="noopener" class="btn btn-small btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7M10 14L21 3M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>
+              <span>Live Site</span>
+            </a>
+            <a href="https://www.figma.com/design/d51DwOznDvuLD4mzY1Tudo/BTM?node-id=0-1" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+              <span>Figma</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Budge -->
+        <article class="project-card">
+          <div class="card-head">
+            <span class="card-num">/04</span>
+            <span class="card-status">project</span>
+          </div>
+          <h3 class="card-title">Budge - Expense Tracker</h3>
+          <p class="card-desc">
+            A budget &amp; expense tracker app that helps you manage finances and stay on top
+            of your spending. Designed and built collaboratively.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Web App</span>
+            <span class="tag">Fintech</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/kengomatsuo/budge" target="_blank" rel="noopener" class="btn btn-small btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.figma.com/design/Y7bPfYIPN2cH0hZqHvBcu4/Budge-WebProg?node-id=0-1" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+              <span>Figma</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Let Me Rest -->
+        <article class="project-card">
+          <div class="card-head">
+            <span class="card-num">/05</span>
+            <span class="card-status"><span class="dot-live"></span>playable</span>
+          </div>
+          <h3 class="card-title">Let Me Rest</h3>
+          <p class="card-desc">
+            A pixel-art browser mini-game, mobile-friendly. Small, weird, fun - built as a
+            break from "serious" projects.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Game</span>
+            <span class="tag">Pixel Art</span>
+            <span class="tag">JS</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://kengomatsuo.github.io/letmerest/" target="_blank" rel="noopener" class="btn btn-small btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7M10 14L21 3M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>
+              <span>Play</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SKILLS =================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">04 //</span>
+        <h2 class="section-title">skills<span class="accent">.</span></h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title"><span class="accent">{</span> design <span class="accent">}</span></h3>
+          <ul class="skill-list">
+            <li class="skill-chip primary">Figma</li>
+            <li class="skill-chip primary">Elementor</li>
+            <li class="skill-chip">UI / UX</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><span class="accent">{</span> frontend <span class="accent">}</span></h3>
+          <ul class="skill-list">
+            <li class="skill-chip primary">HTML / CSS</li>
+            <li class="skill-chip primary">JavaScript</li>
+            <li class="skill-chip primary">WordPress</li>
+            <li class="skill-chip">Responsive Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><span class="accent">{</span> languages <span class="accent">}</span></h3>
+          <ul class="skill-list">
+            <li class="skill-chip primary">Python</li>
+            <li class="skill-chip">Java</li>
+            <li class="skill-chip">C++</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title"><span class="accent">{</span> learning <span class="accent">}</span></h3>
+          <ul class="skill-list">
+            <li class="skill-chip learning">Machine Learning</li>
+            <li class="skill-chip learning">Cloud / DevOps</li>
+            <li class="skill-chip learning">Mandarin</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="skills-legend">
+        <span class="legend-item"><span class="legend-dot primary"></span> proficient</span>
+        <span class="legend-item"><span class="legend-dot"></span> familiar</span>
+        <span class="legend-item"><span class="legend-dot learning"></span> learning</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== CONTACT =================== -->
+  <section id="contact" class="section section-contact">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-num">05 //</span>
+        <h2 class="section-title">contact &amp; goals<span class="accent">.</span></h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="contact-grid">
+        <div class="goals">
+          <h3 class="goals-title">2026 goals</h3>
+          <ul class="goals-list">
+            <li><span class="goal-num">01</span><span>Land a meaningful internship</span></li>
+            <li><span class="goal-num">02</span><span>Publish a second paper before graduating</span></li>
+            <li><span class="goal-num">03</span><span>Go deeper into machine learning</span></li>
+            <li><span class="goal-num">04</span><span>Explore automotive &amp; EV innovation</span></li>
+            <li><span class="goal-num">05</span><span>Build something that bridges software and automotive</span></li>
+
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <p class="contact-eyebrow">▸ get in touch</p>
+          <h3 class="contact-headline">Let's build something.</h3>
+          <p class="contact-sub">Open to internships, freelance work, and weird side projects.</p>
+
+          <div class="contact-links">
+            <a href="mailto:bryanarchie111@gmail.com" class="contact-link">
+              <span class="contact-label">email</span>
+              <span class="contact-val">bryanarchie111@gmail.com</span>
+            </a>
+            <a href="https://wa.me/6287877999099" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-label">whatsapp</span>
+              <span class="contact-val">+62 878-7799-9099</span>
+            </a>
+            <a href="https://www.linkedin.com/in/bryan-archie-21896629b/" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-label">linkedin</span>
+              <span class="contact-val">/in/bryan-archie</span>
+            </a>
+            <a href="https://github.com/Archieeez" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-label">github</span>
+              <span class="contact-val">@Archieeez</span>
+            </a>
+            <a href="https://www.instagram.com/bryanarchie_" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-label">instagram</span>
+              <span class="contact-val">@bryanarchie_</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="footer-quote">"Headlights on. Still figuring out the route."</p>
+        <p class="footer-meta">
+          <span>@2026 Bryan Archie</span>
+          <!-- <span class="footer-sep">·</span>
+          <span>designed &amp; built from scratch</span> -->
+        </p>
+      </footer>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
